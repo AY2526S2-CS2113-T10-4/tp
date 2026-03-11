@@ -30,6 +30,16 @@ public class ParserTest {
         assertEquals("Invalid command.", exception.getMessage());
     }
 
+    // Test when the input command is null
+    @Test
+    public void parse_nullInput_exceptionThrown() {
+        ExpenseList expenses = new ExpenseList();
+        Ui ui = new Ui();
+
+        assertThrows(NullPointerException.class, () ->
+                Parser.parse(null, expenses, ui));
+    }
+
     // Test if non-numeric amount is rejected
     @Test
     public void parse_addInvalidAmount_correctErrorMessage() {
@@ -65,5 +75,4 @@ public class ParserTest {
 
         assertEquals("Usage: add <amount> <category> <date>", exception.getMessage());
     }
-
 }
