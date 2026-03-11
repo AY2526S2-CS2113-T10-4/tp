@@ -1,9 +1,9 @@
 package seedu.finbro.commands;
 
 public class Expense {
-    private double amount;
-    private String category;
-    private String date;
+    private final double amount;
+    private final String category;
+    private final String date;
 
     public Expense(double amount, String category, String date) {
         this.amount = amount;

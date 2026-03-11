@@ -6,9 +6,9 @@ import seedu.finbro.exception.FinbroException;
 import java.util.List;
 
 public class Finbro {
-    private Storage storage;
+    private final Storage storage;
     private ExpenseList expenses;
-    private Ui ui;
+    private final Ui ui;
 
     public Finbro(String filePath) {
         ui = new Ui();
