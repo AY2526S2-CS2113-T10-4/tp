@@ -36,8 +36,10 @@ public class ParserTest {
         ExpenseList expenses = new ExpenseList();
         Ui ui = new Ui();
 
-        assertThrows(NullPointerException.class, () ->
+        FinbroException exception = assertThrows(FinbroException.class, () ->
                 Parser.parse(null, expenses, ui));
+
+        assertEquals("Invalid command.", exception.getMessage());
     }
 
     // Test if non-numeric amount is rejected

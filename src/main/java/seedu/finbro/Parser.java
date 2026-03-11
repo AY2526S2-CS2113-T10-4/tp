@@ -11,6 +11,10 @@ public class Parser {
     private static final String COMMAND_VIEW = "view";
     private static final String COMMAND_DELETE = "delete";
     public static void parse(String input, ExpenseList expenses, Ui ui) throws FinbroException {
+        if (input == null) {
+            throw new FinbroException("Invalid command.");
+        }
+
         input = input.trim();
 
         if (input.equals(COMMAND_ADD)) {
