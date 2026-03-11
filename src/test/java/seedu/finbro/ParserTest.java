@@ -29,4 +29,41 @@ public class ParserTest {
 
         assertEquals("Invalid command.", exception.getMessage());
     }
+
+    // Test if non-numeric amount is rejected
+    @Test
+    public void parse_addInvalidAmount_correctErrorMessage() {
+        ExpenseList expenses = new ExpenseList();
+        Ui ui = new Ui();
+
+        FinbroException exception = assertThrows(FinbroException.class, () ->
+                Parser.parse("add abc food 11/03/2026", expenses, ui));
+
+        assertEquals("Amount must be a number.", exception.getMessage());
+    }
+
+    // Test if wrong date format is rejected
+    @Test
+    public void parse_addInvalidDate_correctErrorMessage() {
+        ExpenseList expenses = new ExpenseList();
+        Ui ui = new Ui();
+
+        FinbroException exception = assertThrows(FinbroException.class, () ->
+                Parser.parse("add 10 food 2026-03-11", expenses, ui));
+
+        assertEquals("Invalid date format! Use dd/MM/yyyy", exception.getMessage());
+    }
+
+    // Test if missing add arguments are rejected
+    @Test
+    public void parse_addMissingArguments_correctErrorMessage() {
+        ExpenseList expenses = new ExpenseList();
+        Ui ui = new Ui();
+
+        FinbroException exception = assertThrows(FinbroException.class, () ->
+                Parser.parse("add 10 food", expenses, ui));
+
+        assertEquals("Usage: add <amount> <category> <date>", exception.getMessage());
+    }
+
 }
