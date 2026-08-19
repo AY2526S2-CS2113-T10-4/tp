@@ -1,19 +1,3 @@
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-  .section-label { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #64748b; margin-bottom: 0.25rem; }
-  .info-box { background: #f8fafc; border-left: 4px solid #3b82f6; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0 6px 6px 0; }
-  .info-box.green { border-left-color: #22c55e; }
-  .info-box.amber { border-left-color: #f59e0b; }
-  .info-box strong { color: #1e40af; }
-  .info-box.green strong { color: #15803d; }
-  .info-box.amber strong { color: #b45309; }
-  .feature-card { border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0; background: #fff; }
-  .badge { display: inline-block; background: #dbeafe; color: #1d4ed8; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.05em; }
-  .pr-links { font-size: 0.85rem; color: #64748b; margin: 0.4rem 0; }
-  h2 { border-bottom: 2px solid #e2e8f0; padding-bottom: 0.4rem; }
-  h3 { color: #1e293b; }
-</style>
-
 # Shah Kushal Hitesh — Project Portfolio Page
 
 <span class="badge">CS2113 · AY2526 S2</span>
